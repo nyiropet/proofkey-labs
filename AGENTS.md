@@ -68,9 +68,39 @@ behind it.
 Use a development IdP application and disposable credentials for these
 exercises. Keep secrets and live tokens out of committed documentation.
 
+## Agreed architecture decisions
+
+- Use Auth0 as the external IdP. The user has created an Auth0 account and
+  application. The user reports configuring
+  `http://localhost:3000/auth/callback` as an Allowed Callback URL. This is the
+  planned local callback route; connectivity has not yet been verified.
+- Use a server-handled OIDC Authorization Code Flow with PKCE. The Next.js
+  server creates and retains the verifier, handles the callback, exchanges the
+  authorization code, verifies the ID token, and creates the portal session.
+- The browser follows redirects and uses the portal's session cookie for
+  subsequent requests. Tokens are received by the server and are not exposed to
+  browser application JavaScript. The verifier is sent to the IdP only in the
+  server-to-server HTTPS token exchange, not in browser redirects.
+- Use portal-managed organization memberships. Our portal's database is the
+  authoritative source for which users belong to which organizations.
+- The external IdP authenticates users; the portal server enforces access to
+  organization data using portal-managed memberships. Successful authentication
+  alone does not grant organization access.
+- Users can belong to multiple organizations, and organizations can have
+  multiple users. Represent this many-to-many relationship through memberships,
+  without duplicating a user's account for each organization.
+- Roles and invitation workflows remain undecided.
+- Use PostgreSQL for persistent portal data and temporary login attempts.
+  Do not introduce Redis without a concrete need. Login attempts must expire,
+  be bound to the initiating browser, and support atomic single-use consumption
+  even under concurrent callback requests. Expired attempts must be rejected
+  independently of eventual record cleanup.
+  Database tooling, schema, and storage for authenticated portal sessions remain
+  to be decided; login attempts and authenticated sessions are distinct.
+
 ## Deferred decisions and charter acceptance
 
-The identity provider, package layout, tenancy details, session storage,
+The package layout, remaining tenancy details, session storage,
 deployment, and product features remain undecided. Resolve them together
 through later architecture lessons rather than silently choosing defaults.
 
