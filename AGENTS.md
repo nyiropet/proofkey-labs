@@ -37,6 +37,11 @@ implementation.
 
 ## Predictable engineering workflow and skill literacy
 
+- Track tasks in https://github.com/nyiropet/proofkey-labs/issues and use the
+  private board https://github.com/users/nyiropet/projects/3/views/2.
+  GitHub Issues are the source of task descriptions. Board statuses are
+  Backlog, Ready, In progress, In review, and Done; keep at most one issue
+  In progress. Initial skills setup is issue #1; skills are not yet installed.
 - Preserve all existing project goals. Teach Matt Pocock / AI Hero engineering
   practices alongside implementation, adapting agent-execution instructions to
   the user's exclusive ownership of code, tests, SQL, migrations, scripts,
