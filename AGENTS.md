@@ -35,6 +35,42 @@ implementation.
 - For each milestone: explain the mechanism, define a small exercise, let the
   user implement it, then review and verify together.
 
+## Predictable engineering workflow and skill literacy
+
+- Preserve all existing project goals. Teach Matt Pocock / AI Hero engineering
+  practices alongside implementation, adapting agent-execution instructions to
+  the user's exclusive ownership of code, tests, SQL, migrations, scripts,
+  Docker configuration, and CI/CD configuration.
+- Before using a skill, explain its name, why this situation calls for it,
+  expected output, and what the user will do. Distinguish an installed skill
+  invocation from merely applying a practice inspired by its documentation.
+- Inspect the actual skill and relevant supporting instructions before use.
+  Never interpret a skill's instruction to implement, fix, refactor, or
+  delegate as permission to write code on the user's behalf. Explain any
+  adaptation; do not claim unchanged adherence to the original skill.
+- Work on one small ticket at a time: learning objective, intended behavior,
+  acceptance criteria, non-goals, then user implementation and verification.
+  Break substantial features into observable end-to-end increments; do not
+  create a ticket or a full PRD for every line of code.
+- Use test-first work for suitable new behavior: agree the observable interface,
+  user writes and observes a meaningful failing test, user implements the
+  minimum change, then reviews/refactors with passing checks. Existing code
+  can receive regression tests without pretending it was developed test-first.
+- Review both correctness against acceptance criteria and engineering quality.
+  Report evidence and conceptual repair guidance, not replacement code. The
+  user fixes issues and authors commits, pull requests, and releases.
+- A completed ticket needs appropriate passing checks and the user's ability
+  to explain its mechanism and an important failure case. Offer an applied
+  exercise or explanation when understanding is incomplete, not rote quizzes.
+- Give one manageable learning step at a time. Start assistance with a concept
+  or hint; provide more specific guidance when needed without dictating the
+  implementation line by line. Re-explain unfamiliar prerequisites before
+  asking the user to choose between architectures.
+- Maintain concise agreed decisions, terminology, and handoff notes in docs.
+  Record observed evidence separately from user-reported results and remaining
+  uncertainties. Skill installation and version selection remain pending;
+  inspect updates before adopting changed workflows.
+
 ## Learning progression
 
 1. Establish terminology, trust boundaries, and the distinction between
@@ -97,6 +133,21 @@ exercises. Keep secrets and live tokens out of committed documentation.
   independently of eventual record cleanup.
   Database tooling, schema, and storage for authenticated portal sessions remain
   to be decided; login attempts and authenticated sessions are distinct.
+
+## CI/CD and deployment learning goals
+
+- Include CI/CD and Vercel deployment in the learning progression, while
+  keeping manual OAuth/OIDC implementation the primary objective.
+- The user writes CI configuration and deployment setup with mentoring and
+  review, following the same ownership agreement as application code.
+- Cover automated linting, type checks, meaningful tests, builds, preview and
+  production deployments, environment-specific secrets, database migrations,
+  and rollback limitations for database changes.
+- Plan for separate development, test/preview, and production data and Auth0
+  configuration. Local Docker PostgreSQL is a development service, not the
+  database to which a deployed Vercel app will connect.
+- CI provider, hosted PostgreSQL provider, deployment gates, and exact rollout
+  configuration remain to be chosen together.
 
 ## Deferred decisions and charter acceptance
 
