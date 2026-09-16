@@ -14,7 +14,7 @@ A reviewed, project-scoped skill selection supports our existing AGENTS.md learn
 - [ ] Review setup-matt-pocock-skills, grill-with-docs, tdd, and handoff, including their referenced dependencies.
 - [ ] Record the selected upstream revision and review any instructions that write code, run autonomous implementation, or delegate work.
 - [ ] Install only the agreed skills and required dependencies; document mentor-only adaptations explicitly.
-- [ ] Configure local .scratch/ Markdown as the task source and choose locations for terminology and decision notes.
+- [x] Configure local .scratch/ Markdown as the task source and choose locations for terminology and decision notes.
 - [ ] Demonstrate choosing a skill for one real project task, explaining why it fits and what the learner will do.
 
 ## Non-goals
@@ -26,4 +26,4 @@ The learner writes code, tests, and configuration. The agent mentors and reviews
 ## Comments
 
 - Migrated to local tracking. The GitHub issue is a historical reference; this file is authoritative.
-
+- 2026-09-15: User approved one root CONTEXT.md and docs/adr/. Added the agreed glossary, three prior decision records, and docs/agents/domain.md. Only the documentation-layout criterion is complete; skill installation and dependency review are still pending.

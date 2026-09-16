@@ -78,6 +78,14 @@ implementation.
   uncertainties. Skill installation and version selection remain pending;
   inspect updates before adopting changed workflows.
 
+## Agent skills
+
+- Issue tracker: local Markdown; see `docs/agents/issue-tracker.md`.
+- Domain documentation: one shared `CONTEXT.md` and `docs/adr/`; see
+  `docs/agents/domain.md`. Read only relevant decision records.
+- This setup adapts Matt Pocock's conventions to mentoring. Skills are not yet
+  installed; selecting an upstream revision and reviewing dependencies remain pending.
+
 ## Learning progression
 
 1. Establish terminology, trust boundaries, and the distinction between
@@ -158,8 +166,9 @@ exercises. Keep secrets and live tokens out of committed documentation.
 
 ## Deferred decisions and charter acceptance
 
-The package layout, remaining tenancy details, session storage,
-deployment, and product features remain undecided. Resolve them together
+The portal is in `apps/portal` in a pnpm workspace. Further package extraction,
+remaining tenancy details, session storage, hosted database and deployment
+configuration, and product features remain undecided. Resolve them together
 through later architecture lessons rather than silently choosing defaults.
 
 This initial step adds documentation only. The charter is complete when it

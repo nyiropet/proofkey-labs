@@ -24,5 +24,4 @@ On 2026-09-15, imported GitHub issues #1–#5 with their contents and board stat
 Based on Matt Pocock's local tracker convention:
 https://github.com/mattpocock/skills/blob/main/skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md
 
-Skills are not installed yet. This document establishes the tracker portion of setup only; domain-document setup and skill installation remain pending.
-
+Skills are not installed yet. Tracker and domain-document locations are configured; see [domain.md](domain.md). Skill review, version selection, and installation remain pending.
