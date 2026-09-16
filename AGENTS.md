@@ -42,8 +42,8 @@ implementation.
   `Status:` line is authoritative. Keep at most one ticket In progress.
   See `docs/agents/issue-tracker.md` for conventions. Existing GitHub issues
   and the Project are historical references, not an active or synchronized
-  tracker. GitHub remains the code, pull-request and CI host. Skills are not
-  yet installed.
+  tracker. GitHub remains the code, pull-request and CI host. Skill installation
+  status and mentoring adaptations are recorded in `docs/agents/skills.md`.
 - Preserve all existing project goals. Teach Matt Pocock / AI Hero engineering
   practices alongside implementation, adapting agent-execution instructions to
   the user's exclusive ownership of code, tests, SQL, migrations, scripts,
@@ -83,8 +83,9 @@ implementation.
 - Issue tracker: local Markdown; see `docs/agents/issue-tracker.md`.
 - Domain documentation: one shared `CONTEXT.md` and `docs/adr/`; see
   `docs/agents/domain.md`. Read only relevant decision records.
-- This setup adapts Matt Pocock's conventions to mentoring. Skills are not yet
-  installed; selecting an upstream revision and reviewing dependencies remain pending.
+- This setup adapts Matt Pocock's conventions to mentoring. See
+  `docs/agents/skills.md` for the pinned version, installed skills, usage boundaries,
+  and remaining dependency reviews.
 
 ## Learning progression
 
