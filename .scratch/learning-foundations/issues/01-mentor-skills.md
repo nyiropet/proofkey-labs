@@ -25,6 +25,7 @@ The learner writes code, tests, and configuration. The agent mentors and reviews
 
 ## Comments
 
+- 2026-09-17: Reviewed and installed grill-with-docs, grilling, and domain-modeling at the pinned commit. Reviewed all bundled Markdown and invocation metadata; documented one-question pacing, no automatic delegation, and glossary-format adaptations in docs/agents/skills.md. Setup files exist but catalog discovery is not verified. tdd, handoff, and the live demonstration remain pending.
 - Migrated to local tracking. The GitHub issue is a historical reference; this file is authoritative.
 - 2026-09-15: User approved one root CONTEXT.md and docs/adr/. Added the agreed glossary, three prior decision records, and docs/agents/domain.md. Only the documentation-layout criterion is complete; skill installation and dependency review are still pending.
 - 2026-09-16: Reviewed and installed setup-matt-pocock-skills from commit 959a8e9f1edc3adbe2f7e3054bb6fbefa6696260 into .agents/skills. Reviewed all bundled reference files and invocation metadata. Recorded usage adaptations in docs/agents/skills.md. Remaining skills and live invocation demonstration are pending; this ticket stays In progress.
