@@ -44,9 +44,9 @@ As of 2026-09-17, setup exists on disk with explicit-only invocation metadata,
 but is not listed in this session's available-skills catalog. Automatic discovery
 and live invocation have not been verified; do not claim otherwise.
 
-`handoff` is not installed. Review its dependencies and mentoring
-conflicts before installing them. Use the pinned commit above as the initial
-review baseline, and review any version change explicitly.
+All four selected skills and the wrapper's required dependencies are installed.
+Conditional TDD references remain deferred as described below. Use the pinned
+commit above as the review baseline, and review any version change explicitly.
 
 ## Installed: grill-with-docs and its dependencies
 
@@ -92,7 +92,7 @@ A live teaching demonstration remains pending.
 - Upstream path: `skills/engineering/tdd`; local path: `.agents/skills/tdd`.
 - Reviewed SKILL.md, tests.md, mocking.md, and agents/openai.yaml. No bundled scripts.
 - Verified the installed directory against the reviewed temporary copy.
-- Installation is verified; catalog discovery and live use remain unverified.
+- Installation and catalog discovery are verified; live use remains unverified.
 
 ### When and how we use it
 
@@ -115,3 +115,21 @@ invoked here. Inspect their instructions before future adoption; this installati
 does not claim those dependency reviews are complete. The mocking guide's
 SDK-style interfaces mean operation-specific boundaries, not permission to adopt
 an authentication SDK forbidden by the charter.
+
+## Installed: handoff
+
+- Installed on 2026-09-17 from the same pinned commit, without upstream edits.
+- Upstream path: `skills/productivity/handoff`; local path: `.agents/skills/handoff`.
+- Reviewed SKILL.md and agents/openai.yaml. No scripts or additional skill dependencies.
+- Installed files match the reviewed temporary copy. Explicit invocation only;
+  catalog discovery and live use remain unverified.
+
+Use when pausing work or moving to a new conversation. Save the handoff in the
+OS temporary directory, as upstream requires; it is not a replacement for the
+tracked local ticket. Reference existing tickets, decisions and diffs instead
+of duplicating them. Exclude secrets and personal information.
+
+Under our mentoring agreement, include the learner's next small exercise,
+observed evidence versus reported results, and unresolved questions. Suggested
+skills must explain their purpose and retain learner ownership of implementation.
+Creating this documentation never authorizes another agent to write code.

@@ -25,6 +25,8 @@ The learner writes code, tests, and configuration. The agent mentors and reviews
 
 ## Comments
 
+- 2026-09-17: Reviewed and installed handoff from skills/productivity/handoff at the pinned commit. Both bundled files reviewed; no additional dependencies. Installed directory comparison and git diff --check passed. All four selected skills are installed; conditional TDD references remain deferred, and a live project demonstration and learner review remain outstanding. tdd is now visible in the available-skills catalog.
+
 - 2026-09-17: Reviewed and installed tdd unchanged at the pinned commit, including its testing/mocking references and metadata. Directory comparison passed. Recorded learner-owned red-green work and conditional codebase-design/code-review references; those skills remain unreviewed and uninstalled. handoff and the live project demonstration remain pending. Catalog discovery is now observed for grilling and domain-modeling.
 
 - 2026-09-17: Reviewed and installed grill-with-docs, grilling, and domain-modeling at the pinned commit. Reviewed all bundled Markdown and invocation metadata; documented one-question pacing, no automatic delegation, and glossary-format adaptations in docs/agents/skills.md. Setup files exist but catalog discovery is not verified. tdd, handoff, and the live demonstration remain pending.
