@@ -44,7 +44,7 @@ As of 2026-09-17, setup exists on disk with explicit-only invocation metadata,
 but is not listed in this session's available-skills catalog. Automatic discovery
 and live invocation have not been verified; do not claim otherwise.
 
-`tdd` and `handoff` are not installed. Review their dependencies and mentoring
+`handoff` is not installed. Review its dependencies and mentoring
 conflicts before installing them. Use the pinned commit above as the initial
 review baseline, and review any version change explicitly.
 
@@ -82,5 +82,36 @@ two skills; those dependencies require no further skill installations.
   entry is unavailable, explicitly describe reading/applying the installed
   instructions manually; never pretend a native skill dispatch occurred.
 
-Installation is verified on disk. Catalog discovery and a live teaching
-demonstration remain pending.
+Installation is verified on disk. On 2026-09-17, grilling and domain-modeling
+were present in the available-skills catalog; the explicit-only wrapper was not.
+A live teaching demonstration remains pending.
+
+## Installed: tdd
+
+- Installed on 2026-09-17 from the same pinned commit, without upstream edits.
+- Upstream path: `skills/engineering/tdd`; local path: `.agents/skills/tdd`.
+- Reviewed SKILL.md, tests.md, mocking.md, and agents/openai.yaml. No bundled scripts.
+- Verified the installed directory against the reviewed temporary copy.
+- Installation is verified; catalog discovery and live use remain unverified.
+
+### When and how we use it
+
+Use for suitable new observable behavior or a bug fix. First agree the public
+interface and expected outcome. The learner writes and observes one meaningful
+failing test, then writes only enough implementation to pass it. Review follows.
+The agent explains and reviews; it never writes either implementation or tests.
+
+Expected results should come from an independent example or specification,
+not a duplicate of the implementation. Existing PKCE code will receive regression
+tests; that does not retroactively make its development test-first.
+
+The pinned skill places refactoring in the review stage, outside its red-green
+loop, despite the metadata's red-green-refactor description. We retain our
+learner-owned review/refactoring agreement with passing checks.
+
+`codebase-design` is a conditional reference when interface design is unresolved;
+`code-review` is a reference for the later review stage. Neither is installed or
+invoked here. Inspect their instructions before future adoption; this installation
+does not claim those dependency reviews are complete. The mocking guide's
+SDK-style interfaces mean operation-specific boundaries, not permission to adopt
+an authentication SDK forbidden by the charter.

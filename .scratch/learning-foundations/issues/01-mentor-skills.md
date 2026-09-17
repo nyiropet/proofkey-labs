@@ -25,6 +25,8 @@ The learner writes code, tests, and configuration. The agent mentors and reviews
 
 ## Comments
 
+- 2026-09-17: Reviewed and installed tdd unchanged at the pinned commit, including its testing/mocking references and metadata. Directory comparison passed. Recorded learner-owned red-green work and conditional codebase-design/code-review references; those skills remain unreviewed and uninstalled. handoff and the live project demonstration remain pending. Catalog discovery is now observed for grilling and domain-modeling.
+
 - 2026-09-17: Reviewed and installed grill-with-docs, grilling, and domain-modeling at the pinned commit. Reviewed all bundled Markdown and invocation metadata; documented one-question pacing, no automatic delegation, and glossary-format adaptations in docs/agents/skills.md. Setup files exist but catalog discovery is not verified. tdd, handoff, and the live demonstration remain pending.
 - Migrated to local tracking. The GitHub issue is a historical reference; this file is authoritative.
 - 2026-09-15: User approved one root CONTEXT.md and docs/adr/. Added the agreed glossary, three prior decision records, and docs/agents/domain.md. Only the documentation-layout criterion is complete; skill installation and dependency review are still pending.
